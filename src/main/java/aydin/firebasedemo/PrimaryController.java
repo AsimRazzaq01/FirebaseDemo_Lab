@@ -33,6 +33,9 @@ public class PrimaryController {
     private TextArea outputTextArea;
 
     @FXML
+    private TextField phoneNumberTextField;
+
+    @FXML
     private Button readButton;
 
 //    @FXML
@@ -97,11 +100,12 @@ public class PrimaryController {
                 listOfUsers.clear();
                 for (QueryDocumentSnapshot document : documents)
                 {
-                    outputTextArea.setText(outputTextArea.getText()+ document.getData().get("Name")+ " , Age: "+
-                            document.getData().get("Age")+ " \n ");
+                    outputTextArea.setText(outputTextArea.getText()+ "Name: "+ document.getData().get("Name")+ " , Age:  "+
+                            document.getData().get("Age")+ " , Phone Number:  "+ document.getData().get("phoneNumber")+ " \n ");
                     System.out.println(document.getId() + " => " + document.getData().get("Name"));
                     person  = new Person(String.valueOf(document.getData().get("Name")),
-                            Integer.parseInt(document.getData().get("Age").toString()));
+                            Integer.parseInt(document.getData().get("Age").toString()),
+                            String.valueOf(document.getData().get("phoneNumber").toString()));
                     listOfUsers.add(person);
                 }
             }
@@ -153,6 +157,7 @@ public class PrimaryController {
         Map<String, Object> data = new HashMap<>();
         data.put("Name", nameTextField.getText());
         data.put("Age", Integer.parseInt(ageTextField.getText()));
+        data.put("phoneNumber", phoneNumberTextField.getText());
 
         //asynchronously write data
         ApiFuture<WriteResult> result = docRef.set(data);
