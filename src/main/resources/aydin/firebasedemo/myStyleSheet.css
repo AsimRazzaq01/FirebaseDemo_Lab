@@ -1,0 +1,19 @@
+
+.background {
+    -fx-background-color: #ffd9cc  ;
+}
+
+.button {
+    -fx-background-color: #66ccff;
+    -fx-border-color: #000;
+    -fx-text-fill: #000000;
+}
+
+.button:hover {
+    -fx-background-color: #00ff00;
+}
+
+.text-field{
+    -fx-background-color: #f2f2f2;
+    -fx-border-color: #000000;
+}

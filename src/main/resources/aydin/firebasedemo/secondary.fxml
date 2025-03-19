@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aydin.firebasedemo.SecondaryController">
+<VBox alignment="CENTER" spacing="20.0" styleClass="background" stylesheets="@myStyleSheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aydin.firebasedemo.SecondaryController">
     <children>
         <Label text="Secondary View" />
         <Button fx:id="secondaryButton" onAction="#switchToPrimary" text="Switch to Primary View" />

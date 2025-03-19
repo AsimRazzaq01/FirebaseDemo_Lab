@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -8,8 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aydin.firebasedemo.WelcomeScreenController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@myStyleSheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aydin.firebasedemo.WelcomeScreenController">
    <children>
       <VBox prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -18,9 +18,9 @@
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                    " wrappingWidth="169.21630859375" />
                   <VBox prefHeight="42.0" prefWidth="222.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                   Welcome " wrappingWidth="221.21630859375">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="              Welcome " wrappingWidth="221.21630859375">
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="24.0" />
                            </font>
                         </Text>
                      </children>
@@ -34,7 +34,7 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="UserNameText" prefHeight="26.0" prefWidth="335.0" />
+                  <TextField fx:id="UserNameText" prefHeight="26.0" prefWidth="335.0" styleClass="text-field" stylesheets="@myStyleSheet.css" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
@@ -44,15 +44,23 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="PasswordText" prefHeight="26.0" prefWidth="335.0" />
+                  <TextField fx:id="PasswordText" prefHeight="26.0" prefWidth="335.0" styleClass="text-field" stylesheets="@myStyleSheet.css" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                  " wrappingWidth="100.98828125" />
-                  <Button mnemonicParsing="false" onAction="#LoginButtonAction" prefHeight="37.0" prefWidth="150.0" text="Login" />
+                  <Button mnemonicParsing="false" onAction="#LoginButtonAction" prefHeight="37.0" prefWidth="150.0" stylesheets="@myStyleSheet.css" text="Login">
+                     <styleClass>
+                        <String fx:value="button" />
+                        <String fx:value="active" />
+                     </styleClass></Button>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                  " wrappingWidth="110.98828125" />
-                  <Button mnemonicParsing="false" onAction="#RegisterButtonAction" prefHeight="37.0" prefWidth="150.0" text="Register" />
+                  <Button mnemonicParsing="false" onAction="#RegisterButtonAction" prefHeight="37.0" prefWidth="150.0" stylesheets="@myStyleSheet.css" text="Register">
+                     <styleClass>
+                        <String fx:value="button" />
+                        <String fx:value="active" />
+                     </styleClass></Button>
                </children>
             </HBox>
          </children>
