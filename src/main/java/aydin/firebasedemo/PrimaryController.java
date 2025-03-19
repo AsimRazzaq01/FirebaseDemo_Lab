@@ -35,8 +35,8 @@ public class PrimaryController {
     @FXML
     private Button readButton;
 
-    @FXML
-    private Button registerButton;
+//    @FXML
+//    private Button registerButton;
 
     @FXML
     private Button switchSecondaryViewButton;
@@ -65,10 +65,10 @@ public class PrimaryController {
         readFirebase();
     }
 
-    @FXML
-    void registerButtonClicked(ActionEvent event) {
-        registerUser();
-    }
+//    @FXML
+//    void registerButtonClicked(ActionEvent event) {
+//        registerUser();
+//    }
 
 
     @FXML
@@ -119,6 +119,7 @@ public class PrimaryController {
         return key;
     }
 
+    /*
     public boolean registerUser() {
         UserRecord.CreateRequest request = new UserRecord.CreateRequest()
                 .setEmail("user222@example.com")
@@ -142,6 +143,8 @@ public class PrimaryController {
         }
 
     }
+
+     */
 
     public void addData() {
 

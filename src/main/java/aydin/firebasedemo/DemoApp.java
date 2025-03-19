@@ -37,8 +37,8 @@ public class DemoApp extends Application {
     public void start(Stage stage) throws IOException {
         fstore = contxtFirebase.firebase();
         fauth = FirebaseAuth.getInstance();
-
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        // primary
+        scene = new Scene(loadFXML("WelcomeScreen"), 640, 480);
         stage.setScene(scene);
         stage.show();
     }

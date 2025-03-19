@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aydin.firebasedemo.WelcomeScreenController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="67.0" prefWidth="457.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                    " wrappingWidth="169.21630859375" />
+                  <VBox prefHeight="42.0" prefWidth="222.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                   Welcome " wrappingWidth="221.21630859375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="      Username :" wrappingWidth="130.69921875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="UserNameText" prefHeight="26.0" prefWidth="335.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="       Password :" wrappingWidth="131.9951171875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="PasswordText" prefHeight="26.0" prefWidth="335.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                  " wrappingWidth="100.98828125" />
+                  <Button mnemonicParsing="false" onAction="#LoginButtonAction" prefHeight="37.0" prefWidth="150.0" text="Login" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                  " wrappingWidth="110.98828125" />
+                  <Button mnemonicParsing="false" onAction="#RegisterButtonAction" prefHeight="37.0" prefWidth="150.0" text="Register" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

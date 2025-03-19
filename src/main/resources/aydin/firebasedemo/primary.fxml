@@ -23,7 +23,6 @@
                     <children>
                         <Button fx:id="readButton" mnemonicParsing="false" onAction="#readButtonClicked" prefHeight="30.0" prefWidth="80.0" text="Read" />
                         <Button fx:id="writeButton" mnemonicParsing="false" onAction="#writeButtonClicked" prefHeight="30.0" prefWidth="80.0" text="Write" />
-                        <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="30.0" prefWidth="80.0" text="Register" />
                         <Button fx:id="switchSecondaryViewButton" onAction="#switchToSecondary" prefHeight="30.0" prefWidth="180.0" text="Switch to Secondary View" />
                     </children>
                 </HBox>
