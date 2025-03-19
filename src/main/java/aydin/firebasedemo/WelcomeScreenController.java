@@ -41,11 +41,11 @@ public class WelcomeScreenController {
         String userName = UserNameText.getText();
         String password = PasswordText.getText();
 
-
-        // if signIn returns true if matching username & password was found & goes to the primary screen
+        // if signIn returns true then matching username & password was found
+        // & goes to the primary screen
         if (signIn(userName, password))
         {
-            System.out.println(userName + " is in database");
+            System.out.println(userName + " is inside the database");
             try {
                 switchToPrimary();
             } catch (IOException e) {
@@ -53,40 +53,7 @@ public class WelcomeScreenController {
             }
         }
         else
-            System.out.println(userName + " is not in database or password wrong");
-
-//        //asynchronously retrieve all documents
-//        ApiFuture<QuerySnapshot> future =  DemoApp.fstore.collection("Users").get();
-//        // future.get() blocks on response
-//        List<QueryDocumentSnapshot> documents;
-//        try
-//        {
-//            documents = future.get().getDocuments();
-//            if(documents.size()>0)
-//            {
-//                System.out.println("Checking for User in firabase database....");
-//
-//                for (QueryDocumentSnapshot document : documents)
-//                {
-//                    userName = document.getData().get("UserName").toString();
-//                    password = document.getData().get("Password").toString();
-//                }
-//                // exits the method and returns true when matching username & password was found
-//                if (UserNameText.getText().equals(userName) && PasswordText.getText().equals(password)){
-//                    System.out.println("User successfully logged in");
-//                    switchToPrimary();
-//                }
-//            }
-//            else
-//            {
-//                System.out.println("No User found in firebase database....");
-//            }
-//            //key=true;
-//        }
-//        catch (InterruptedException | ExecutionException | IOException ex)
-//        {
-//            ex.printStackTrace();
-//        }
+            System.out.println(userName + " is not inside database or password is incorrect");
     }
 
     @FXML
@@ -151,39 +118,31 @@ public class WelcomeScreenController {
     }
 
 
-    public boolean signIn(String username, String password)
-    {
+    public boolean signIn(String username, String password) {
         ApiFuture<QuerySnapshot> future = DemoApp.fstore.collection("Users").get();
-
         List<QueryDocumentSnapshot> documents;
-        try
-        {
+        try {
             documents = future.get().getDocuments();
-            if(documents.size()>0)
-            {
+            if(documents.size()>0) {
                 System.out.println("Checking if user is in database...");
 
                 // user and pass are used to store the usernames and passwords in the firestore database
-                String user = "", pass;
-                boolean found = false;
+                String User = "", Pass;
 
                 // going through the document list
                 for (QueryDocumentSnapshot document : documents)
                 {
-//                    System.out.println(document.getId() + " => " + document.getData().get("UserName")
-//                            + " " + document.getData().get("Password"));
-
-                    user = document.getData().get("UserName").toString();
-                    pass = document.getData().get("Password").toString();
+                    User = document.getData().get("UserName").toString();
+                    Pass = document.getData().get("Password").toString();
 
                     // exits the method and returns true when matching username & password was found
-                    if (username.equals(user) && password.equals(pass))
+                    if (username.equals(User) && password.equals(Pass))
                         return true;
                 }
             }
             else
             {
-                System.out.println("No Users in the database");
+                System.out.println("No User found in database");
             }
         } catch (InterruptedException | ExecutionException ex)
         {
@@ -195,5 +154,5 @@ public class WelcomeScreenController {
 
 
 
-}
+}   // End
 
